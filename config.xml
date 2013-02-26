@@ -19,7 +19,7 @@
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="true" />
 	
-	<gap:splash src="img/logo.jpg" />
+	<gap:splash src="img/splash.jpg" />
 
     <icon src="icon.png" />
 </widget>
