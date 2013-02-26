@@ -15,9 +15,11 @@
 
     <feature name="http://api.phonegap.com/1.0/device" />
 
-    <preference name="orientation"      value="default" />
+    <preference name="orientation"      value="portrait" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="true" />
+	
+	<gap:splash src="img/logo.jpg" />
 
     <icon src="icon.png" />
 </widget>
