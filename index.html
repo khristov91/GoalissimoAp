@@ -1,5 +1,6 @@
 <html>
 <head>
+	<script src="https://www.goalissimo.org/game2/js/jquery.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			var now_page = $(".page_content").attr('id');
@@ -7,21 +8,21 @@
 			if(now_page == 'login' || now_page == 'home') {
 				document.addEventListener("backbutton", exit_confirm, false);
 			}
-			
-			function exit_confirm() {
-				navigator.notification.confirm(
-					'Are you sure to exit?',
-					onConfirm,
-					'Exit',
-					'Yes,No'
-				);
-			}
-			
-			function onConfirm(buttonIndex) {
-				//navigator.app.exitApp();
-				alert(buttonIndex);
-			}
 		});
+		
+		function exit_confirm() {
+			navigator.notification.confirm(
+				'Are you sure to exit?',
+				onConfirm,
+				'Exit',
+				'Yes,No'
+			);
+		}
+		
+		function onConfirm(buttonIndex) {
+			//navigator.app.exitApp();
+			alert(buttonIndex);
+		}
 	</script>
 </head>
 	<body onLoad="window.location = 'https://www.goalissimo.org/mobile/'">
