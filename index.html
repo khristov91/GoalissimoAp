@@ -3,8 +3,8 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			var now_page = $(".page_content").attr('id');
+			alert(now_page);
 			if(now_page == 'login' || now_page == 'home') {
-				alert(now_page);
 				document.addEventListener("backbutton", exit_confirm, false);
 			}
 			
