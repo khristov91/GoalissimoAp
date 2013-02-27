@@ -1,5 +1,30 @@
 <html>
 <head>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var now_page = $(".page_content").attr('id');
+			if(now_page == 'login' || now_page == 'home') {
+				alert(now_page);
+				document.addEventListener("backbutton", exit_confirm, false);
+			}
+			
+			function exit_confirm() {
+				navigator.notification.confirm(
+					'Are you sure to exit?',
+					onConfirm,
+					'Exit',
+					'Yes,No'
+				);
+			}
+			
+			function onConfirm(buttonIndex) {
+				//navigator.app.exitApp();
+				alert(buttonIndex);
+			}
+		});
+	</script>
 </head>
-	<body onLoad="window.location = 'https://www.goalissimo.org/mobile/'"></body>
+	<body onLoad="window.location = 'https://www.goalissimo.org/mobile/'">
+	
+	</body>
 </html>
